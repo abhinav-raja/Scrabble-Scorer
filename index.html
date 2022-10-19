@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Scrabble Scorer</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="flex-col p-4">
+            <h1>Scorabble</h1>
+            <h2>Simple scoring for Scrabble</h2>
+            <div class="flex-row m-4 p-4">
+                <div class="flex-col w-50 p-4">
+                    <h3>P1</h3>
+                    <p id="p1Score">0</p>
+                </div>
+                <div class="flex-col w-50 p-4">
+                    <h3>P2</h3>
+                    <p id="p2Score">0</p>
+                </div>
+            </div>
+            <div class="flex-col p-4 m-4">
+                <div class="p-2 flex-col">
+                    <p class="inline-block">Word: </p>
+                    <input type="text" id="wordInput" class="p-2">
+                </div>
+                <div class="p-2">
+                    <p class="inline-block">2x Score Letters: </p>
+                    <input type="text" id="2xInput" class="p-2">
+                </div>
+                <div class="p-2">
+                    <p class="inline-block">3x Score Letters: </p>
+                    <input type="text" id="3xInput" class="p-2">
+                </div>
+                <div class="p-2">
+                    <p class="inline-block">Word Score Multiplier: </p>
+                    <input type="number" id="multInput" class="p-2" value=1>
+                </div>
+            </div>
+            <button id="calcScore" class="p-2">Calculate Score</button>
+            <div class="hidden" id="results">
+                <p>The play <span id="wordOp"></span> gets <b><span id="scoreOp"></span></b> points!</p>
+                <button id="p1ScoreIncrease" class="p-2">Add to Player 1</button>
+                <button id="p2ScoreIncrease" class="p-2">Add to Player 2</button>
+            </div>
+        </div>
+        <script src="jquery.min.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>
